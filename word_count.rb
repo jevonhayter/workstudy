@@ -22,5 +22,3 @@ class Phrase
     @count
   end
 end
-word = Phrase.new("Joe can't tell between 'large' and large.")
-puts word.count_words
