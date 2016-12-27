@@ -1,11 +1,11 @@
 # Program to count how many duplicate words are in a phrase.
 class Phrase
-  def initialize(string)
-    @string = string.downcase
+  def initialize(phrase)
+    @phrase = phrase.downcase
   end
 
-  def string
-    @string.tr(',', ' ')
+  def phrase
+    @phrase.tr(',', ' ')
            .delete(':')
            .split
            .each do |word|
@@ -16,8 +16,8 @@ class Phrase
   def count_words
     @word_keeper = {}
 
-    string.each do |word|
-      @word_keeper[word] = string.count(word)
+    phrase.each do |word|
+      @word_keeper[word] = phrase.count(word)
     end
     @word_keeper
   end
