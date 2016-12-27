@@ -14,11 +14,11 @@ class Phrase
   end
 
   def count_words
-    @count = {}
+    @word_keeper = {}
 
     string.each do |word|
-      @count[word] = string.count(word)
+      @word_keeper[word] = string.count(word)
     end
-    @count
+    @word_keeper
   end
 end
