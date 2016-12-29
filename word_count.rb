@@ -9,7 +9,7 @@ class Phrase
            .delete(':')
            .split
            .each do |word|
-      word.gsub!(/[^abcdefghijklmnopqrstuvwxyz0123456789 ]/, '')
+      word.gsub!(/[^abcdefghijklmnopqrstuvwxyz0123456789]/, '')
     end
   end
 
