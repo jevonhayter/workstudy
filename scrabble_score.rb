@@ -5,19 +5,23 @@ class Scrabble
   end
 
   def word
-    if @word == nil?
+    if @word == nil
       ' '
     else
       @word.upcase
     end
   end
 
-  def process
+  def score
     total = 0
     word.upcase.chars.each do |letter|
       total += points(letter)
     end
     total
+  end
+
+  def self.score(word)
+    Scrabble.new(word).score
   end
 
   def points(letter)
